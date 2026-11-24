@@ -9,11 +9,10 @@ const translations = {
     navContact: "Contact",
     availability: "OPEN TO JUNIOR OPPORTUNITIES",
     heroLead:
-      "JavaScript and Node.js developer based in Morocco. I learn by building useful web projects, from participant-facing websites to server-side tools.",
+      "JavaScript and Node.js developer. I learn by building useful web projects, from participant-facing websites to server-side tools.",
     explore: "Explore my work",
     getInTouch: "Get in touch",
     artCaption: "LEARNING BY BUILDING",
-    basedIn: "BASED IN MOROCCO",
     scrollExplore: "SCROLL TO EXPLORE",
     selectedProjects: "SELECTED PROJECTS",
     thingsBuilt: "Things I’ve built",
@@ -32,14 +31,6 @@ const translations = {
     skillsIntro:
       "I focus on the JavaScript ecosystem and build fundamentals before adding frameworks.",
     responsive: "Responsive design",
-    nextEyebrow: "WHAT I’M BUILDING NEXT",
-    nextTitle: "Appointment booking<br>and management app",
-    nextDescription:
-      "A small business tool for services, availability, bookings, and cancellations — built with a Node.js API and a JavaScript front end.",
-    idea: "PROJECT IDEA",
-    nextDetails:
-      "This will show a different set of skills from my Tombola: scheduling, database relationships, authentication, and booking workflows.",
-    suggestCollab: "Suggest a collaboration",
     contactEyebrow: "HAVE AN IDEA?",
     contactTitle: "Let’s make something",
     contactAccent: "useful together.",
@@ -51,10 +42,16 @@ const translations = {
     projectCategory: "JAVASCRIPT WEB APP",
     projectDescription:
       "A multilingual community draw with participant registration, Moroccan phone validation, a private organiser dashboard, CSV export, and a one-time random draw.",
+    bookingCategory: "JAVASCRIPT / CLOUDFLARE APP",
+    bookingDescription:
+      "An appointment booking demo with service selection, available time slots, duplicate booking protection, cancellation codes, and an organizer dashboard, powered by Cloudflare Workers and D1.",
     liveDemo: "LIVE DEMO",
+    inDevelopment: "IN DEVELOPMENT",
     participantLink: "Visit participant draw",
     organizerLink: "Organizer sign-in",
+    bookingLink: "Open booking demo",
     projectLabel: "PROJECT",
+    bookingTitle: "Appointment Booking Demo",
     languageButton: "Français",
     languageAria: "Passer en français",
     pageTitle: "Mohamed Amine Nejdi | JavaScript & Node.js Developer",
@@ -70,11 +67,10 @@ const translations = {
     navContact: "Contact",
     availability: "À LA RECHERCHE D’UN PREMIER POSTE",
     heroLead:
-      "Développeur JavaScript et Node.js basé au Maroc. J’apprends en créant des projets web utiles, des sites destinés aux participants aux outils côté serveur.",
+      "Développeur JavaScript et Node.js. J’apprends en créant des projets web utiles, des sites destinés aux participants aux outils côté serveur.",
     explore: "Découvrir mes projets",
     getInTouch: "Me contacter",
     artCaption: "APPRENDRE EN CRÉANT",
-    basedIn: "BASÉ AU MAROC",
     scrollExplore: "DÉFILER POUR EXPLORER",
     selectedProjects: "PROJETS SÉLECTIONNÉS",
     thingsBuilt: "Mes réalisations",
@@ -93,14 +89,6 @@ const translations = {
     skillsIntro:
       "Je me concentre sur l’écosystème JavaScript et ses fondamentaux avant d’ajouter des frameworks.",
     responsive: "Design adaptatif",
-    nextEyebrow: "MON PROCHAIN PROJET",
-    nextTitle: "Application de réservation<br>et de gestion de rendez-vous",
-    nextDescription:
-      "Un outil pour petites entreprises : services, disponibilités, réservations et annulations, avec une API Node.js et une interface JavaScript.",
-    idea: "IDÉE DE PROJET",
-    nextDetails:
-      "Ce projet complétera ma Tombola avec d’autres compétences : gestion des horaires, relations entre données, authentification et réservations.",
-    suggestCollab: "Proposer une collaboration",
     contactEyebrow: "UN PROJET EN TÊTE ?",
     contactTitle: "Créons quelque chose",
     contactAccent: "d’utile ensemble.",
@@ -112,10 +100,16 @@ const translations = {
     projectCategory: "APPLICATION WEB JAVASCRIPT",
     projectDescription:
       "Une tombola communautaire multilingue avec inscription, validation des numéros marocains, espace organisateur privé, export CSV et tirage au sort unique.",
+    bookingCategory: "APPLICATION JAVASCRIPT / CLOUDFLARE",
+    bookingDescription:
+      "Une démo de réservation avec choix du service, créneaux disponibles, protection contre les doublons, codes d’annulation et espace organisateur, propulsée par Cloudflare Workers et D1.",
     liveDemo: "DÉMO EN LIGNE",
+    inDevelopment: "EN DÉVELOPPEMENT",
     participantLink: "Accéder à la tombola",
     organizerLink: "Connexion organisateur",
+    bookingLink: "Ouvrir la démo de réservation",
     projectLabel: "PROJET",
+    bookingTitle: "Démo de réservation",
     languageButton: "English",
     languageAria: "Switch to English",
     pageTitle: "Mohamed Amine Nejdi | Développeur JavaScript et Node.js",
@@ -124,16 +118,30 @@ const translations = {
   },
 };
 
-const tombolaBaseUrl = "https://community-tombola.fiat-tomobola.workers.dev";
+const tombolaBaseUrl = "https://community-tombola.my-siteamine.dev";
 const projects = [
   {
     number: "01",
     title: "Community Tombola",
+    categoryKey: "projectCategory",
+    descriptionKey: "projectDescription",
+    statusKey: "liveDemo",
+    visual: "tombola",
     stack: ["JavaScript", "Cloudflare Workers", "D1 SQL"],
     links: [
       { key: "participantLink", url: tombolaBaseUrl },
       { key: "organizerLink", url: `${tombolaBaseUrl}/admin` },
     ],
+  },
+  {
+    number: "02",
+    titleKey: "bookingTitle",
+    categoryKey: "bookingCategory",
+    descriptionKey: "bookingDescription",
+    statusKey: "liveDemo",
+    visual: "booking",
+    stack: ["JavaScript", "Cloudflare Workers", "D1 SQL"],
+    links: [{ key: "bookingLink", url: "https://appointment-booking-demo.my-siteamine.workers.dev" }],
   },
 ];
 
@@ -152,9 +160,19 @@ function renderProjects(language) {
     .map(
       (project) => `
     <article class="project-card">
-      <div class="project-top"><span class="project-number">${project.number} / ${t.projectLabel}</span><span class="status-pill"><span></span>${t.liveDemo}</span></div>
-      <div class="project-visual tombola-visual" aria-hidden="true"><span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span><span class="visual-ticket">LUCK<br><b>+&nbsp; COMMUNITY</b></span><span class="visual-spark">✳</span></div>
-      <div class="project-info"><p class="eyebrow">${t.projectCategory}</p><h3>${project.title}</h3><p class="project-description">${t.projectDescription}</p><div class="tag-list">${project.stack.map((tag) => `<span>${tag}</span>`).join("")}</div><div class="project-links">${project.links.map((link) => `<a class="project-link" href="${link.url}" target="_blank" rel="noopener noreferrer">${t[link.key]} <span aria-hidden="true">↗</span></a>`).join("")}</div></div>
+      <div class="project-top"><span class="project-number">${project.number} / ${t.projectLabel}</span><span class="status-pill"><span></span>${t[project.statusKey]}</span></div>
+      ${project.visual === "booking" ? '<div class="project-visual booking-visual" aria-hidden="true"><div class="calendar-card"><span class="calendar-top"></span><span class="calendar-date">24</span><span class="calendar-lines"><i></i><i></i><i></i></span><span class="calendar-check">✓</span></div></div>' : '<div class="project-visual tombola-visual" aria-hidden="true"><span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span><span class="visual-ticket">LUCK<br><b>+&nbsp; COMMUNITY</b></span><span class="visual-spark">✳</span></div>'}
+      <div class="project-info"><p class="eyebrow">${t[project.categoryKey]}</p><h3>${project.titleKey ? t[project.titleKey] : project.title}</h3><p class="project-description">${t[project.descriptionKey]}</p><div class="tag-list">${project.stack.map((tag) => `<span>${tag}</span>`).join("")}</div>${
+        project.links.some((link) => link.url)
+          ? `<div class="project-links">${project.links
+              .filter((link) => link.url)
+              .map(
+                (link) =>
+                  `<a class="project-link" href="${link.url}" target="_blank" rel="noopener noreferrer">${t[link.key]} <span aria-hidden="true">↗</span></a>`,
+              )
+              .join("")}</div>`
+          : ""
+      }</div>
     </article>
   `,
     )
@@ -185,20 +203,17 @@ function setLanguage(language) {
 
 if (year) year.textContent = new Date().getFullYear();
 setLanguage(currentLanguage);
-
 languageToggle?.addEventListener("click", () =>
   setLanguage(currentLanguage === "en" ? "fr" : "en"),
 );
-
 menuToggle?.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
   menuToggle.setAttribute("aria-expanded", String(!isOpen));
   nav?.classList.toggle("is-open", !isOpen);
 });
-
-nav?.querySelectorAll("a").forEach((link) => {
+nav?.querySelectorAll("a").forEach((link) =>
   link.addEventListener("click", () => {
     menuToggle?.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
-  });
-});
+  }),
+);

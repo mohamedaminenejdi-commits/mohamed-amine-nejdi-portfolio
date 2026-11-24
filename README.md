@@ -28,7 +28,7 @@ Your email and phone number will be visible to the public. The Tombola card link
 ## Personalize it before publishing
 
 - Your name, email, phone, GitHub profile, and Tombola links are filled in. Check them before publishing because contact details will be public.
-- In `app.js`, edit the `projects` array to add your own projects and update project links.
+- In `app.js`, edit the `projects` array to add your own projects and update project links. The appointment booking project is listed as `IN DEVELOPMENT` until you deploy it and set its live URL.
 - The language button switches between English and French. Text is in the `translations` object in `app.js`.
 - Keep project status honest: label work as `LIVE`, `DEMO`, or `IN PROGRESS` accurately.
 - In `style.css`, adjust colors, spacing, and layout. The light blue theme and gradient are at the end of the file.
@@ -65,6 +65,6 @@ This portfolio is a static website. GitHub Pages can publish the files in the re
 
 If Git says the remote already exists, use `git remote set-url origin https://github.com/mohamedaminenejdi-commits/mohamed-amine-nejdi-portfolio.git` before pushing. If you later want a server-side contact form or Node API, host that backend separately on a service that runs Node.js.
 
-## Next portfolio project idea
+## Appointment booking project
 
-Build a **small-business appointment booking app** with a JavaScript front end and a Node.js API. Add service listings, available time slots, booking creation/cancellation, an organiser login, and a database. It complements the Tombola by demonstrating scheduling and CRUD workflows. Start with fake/demo data; do not collect real customer data until hosting, privacy, and access controls are ready.
+The second portfolio project is in the separate `appointment-booking-cloudflare` folder. Follow its README to run it locally and deploy the Worker with D1. Once Cloudflare gives you the deployed URL, update the project entry in this portfolio's `app.js` with a live link, then push the portfolio change to GitHub to publish it.
