@@ -118,7 +118,7 @@ const translations = {
   },
 };
 
-const tombolaBaseUrl = "https://community-tombola.my-siteamine.dev";
+const tombolaBaseUrl = "https://community-tombola.my-siteamine.workers.dev";
 const projects = [
   {
     number: "01",
