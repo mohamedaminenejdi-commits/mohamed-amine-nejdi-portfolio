@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Mohamed Amine Nejdi, a JavaScript and Node.js developer building useful web apps.">
-  <meta name="theme-color" content="#f6faff">
+  <meta name="theme-color" content="#fafafa">
   <title>Mohamed Amine Nejdi | JavaScript &amp; Node.js Developer</title>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
@@ -25,29 +25,35 @@
   <main id="main">
     <section class="hero section-wrap" id="top">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="availability-dot"></span><span data-i18n="availability">OPEN TO JUNIOR OPPORTUNITIES</span></p>
-        <h1>Mohamed Amine<br><span class="accent-text">Nejdi.</span></h1>
-        <p class="hero-lead" data-i18n="heroLead">JavaScript and Node.js developer. I learn by building useful web projects, from participant-facing websites to server-side tools.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work"><span data-i18n="explore">Explore my work</span><span aria-hidden="true">↓</span></a><a class="text-link" href="#contact"><span data-i18n="getInTouch">Get in touch</span> <span aria-hidden="true">↗</span></a></div>
+        <p class="eyebrow" data-i18n="heroEyebrow">Portfolio of Mohamed Amine Nejdi</p>
+        <h1><span data-i18n="heroTitle">Useful web apps</span><br><span class="accent-text" data-i18n="heroAccent">built with JavaScript</span></h1>
+        <p class="hero-lead" data-i18n="heroLead">I build with JavaScript and Node.js, from participant registration and organiser tools to appointment booking.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#work"><span data-i18n="explore">Explore my work</span><span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#contact"><span data-i18n="getInTouch">Get in touch</span><span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="hero-art" aria-label="Decorative JavaScript code illustration" role="img">
-        <div class="code-window"><div class="window-bar"><span></span><span></span><span></span><small>mohamed-amine.js</small></div><div class="code-lines"><p><i>01</i> <b>const</b> focus = <em>'useful apps'</em>;</p><p><i>02</i> <b>const</b> stack = [</p><p><i>03</i> &nbsp; <em>'JavaScript'</em>,</p><p><i>04</i> &nbsp; <em>'Node.js'</em></p><p><i>05</i> ];</p><p><i>06</i> <b>build</b>(focus, stack);<span class="cursor"></span></p></div><div class="js-stamp">JS</div></div>
-        <span class="art-caption"><span data-i18n="artCaption">LEARNING BY BUILDING</span> <span>✳</span></span>
+      <div class="hero-art" aria-label="Preview of the Community Tombola entry page" role="img">
+        <div class="entry-preview">
+          <div class="preview-heading"><span class="preview-mark">CT</span><span><strong>Community Tombola</strong><small data-i18n="entryPreviewLabel">Participant entry</small></span><span class="preview-index">01</span></div>
+          <div class="preview-body">
+            <div class="preview-form"><strong data-i18n="entryPreviewTitle">Enter the draw</strong><span class="preview-field" data-i18n="nameField">Full name</span><span class="preview-field" data-i18n="phoneField">Moroccan mobile number</span><span class="preview-submit" data-i18n="submitEntry">Submit entry</span></div>
+            <div class="raffle-ticket"><span data-i18n="drawTicket">COMMUNITY DRAW</span><strong>01</strong><i></i><small data-i18n="ticketCaption">A simple entry, managed privately</small></div>
+          </div>
+        </div>
+        <p class="art-caption" data-i18n="artCaption">A project preview from my portfolio</p>
       </div>
-      <div class="hero-bottom"><a href="#work"><span data-i18n="scrollExplore">SCROLL TO EXPLORE</span> <span aria-hidden="true">↓</span></a><span>JAVASCRIPT · NODE.JS</span></div>
+      <div class="hero-bottom"><span data-i18n="heroFootnote">JavaScript · Node.js · Cloudflare</span><a href="#work" data-i18n="scrollExplore">Selected projects ↓</a></div>
     </section>
 
     <section class="work-section section-wrap" id="work">
-      <div class="section-heading"><div><p class="eyebrow" data-i18n="selectedProjects">SELECTED PROJECTS</p><h2><span data-i18n="thingsBuilt">Things I’ve built</span><span class="accent-text">.</span></h2></div><p class="section-intro" data-i18n="workIntro">A growing collection of practical projects. Each one teaches me something new about designing, building, and improving web software.</p></div>
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="selectedProjects">Selected projects</p><h2><span data-i18n="thingsBuilt">Things I’ve built</span></h2></div><p class="section-intro" data-i18n="workIntro">A collection of practical projects that help me learn how to design, build, and improve web software.</p></div>
       <div class="project-grid" id="project-grid" aria-live="polite"></div>
     </section>
 
     <section class="about-section" id="about"><div class="section-wrap about-grid"><div><p class="eyebrow" data-i18n="aboutEyebrow">A LITTLE ABOUT ME</p><h2><span data-i18n="aboutTitle">Curious by nature.</span><br><span class="accent-text" data-i18n="aboutAccent">Builder by practice.</span></h2></div><div class="about-copy"><p data-i18n="aboutText1">I’m growing my skills in JavaScript and Node.js by making complete projects, not just isolated exercises. I enjoy taking an idea from a simple screen to working features that people can use.</p><p data-i18n="aboutText2">My current focus is clean front-end experiences, reliable server-side logic, and learning how to ship projects responsibly.</p><a class="text-link" href="#contact"><span data-i18n="talkProject">Let’s talk about a project</span> <span aria-hidden="true">↗</span></a></div></div></section>
 
-    <section class="skills-section section-wrap" id="skills"><div class="section-heading"><div><p class="eyebrow" data-i18n="skillsEyebrow">TOOLS I’M PRACTISING</p><h2><span data-i18n="toolkit">My current toolkit</span><span class="accent-text">.</span></h2></div><p class="section-intro" data-i18n="skillsIntro">I focus on the JavaScript ecosystem and build fundamentals before adding frameworks.</p></div><div class="skill-list"><span>JavaScript (ES6+)</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>REST APIs</span><span>SQL / D1</span><span>Git &amp; GitHub</span><span data-i18n="responsive">Responsive design</span></div></section>
+    <section class="skills-section section-wrap" id="skills"><div class="section-heading"><div><p class="eyebrow" data-i18n="skillsEyebrow">Tools I’m practising</p><h2><span data-i18n="toolkit">My current toolkit</span></h2></div><p class="section-intro" data-i18n="skillsIntro">I focus on the JavaScript ecosystem and build fundamentals before adding frameworks.</p></div><div class="skill-list"><span>JavaScript (ES6+)</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>REST APIs</span><span>SQL / D1</span><span>Git &amp; GitHub</span><span data-i18n="responsive">Responsive design</span></div></section>
 
     <section class="contact-section" id="contact"><div class="section-wrap contact-inner"><p class="eyebrow" data-i18n="contactEyebrow">HAVE AN IDEA?</p><h2><span data-i18n="contactTitle">Let’s make something</span><br><span class="accent-text" data-i18n="contactAccent">useful together.</span></h2><p class="contact-copy" data-i18n="contactCopy">I’m open to feedback, junior opportunities, and small projects where I can learn and contribute.</p><div class="contact-actions"><a class="button button-primary" href="mailto:mohamed.amine.nejdi@gmail.com"><span data-i18n="emailMe">Email me</span> <span aria-hidden="true">↗</span></a><a class="button button-phone" href="tel:+212639303640"><span data-i18n="callMe">Call me</span> <span aria-hidden="true">↗</span></a></div><div class="contact-details"><a href="mailto:mohamed.amine.nejdi@gmail.com">mohamed.amine.nejdi@gmail.com</a><a href="tel:+212639303640">06 39 30 36 40</a></div><div class="social-links"><a href="https://github.com/mohamedaminenejdi-commits" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
   </main>
-  <footer class="site-footer section-wrap"><a class="brand" href="#top"><span class="brand-mark">MN</span><span>MOHAMED AMINE NEJDI <span class="brand-muted">/ DEVELOPER</span></span></a><p data-i18n="footerBuilt">Designed and built with HTML, CSS, and JavaScript.</p><span>© <span id="year"></span> MOHAMED AMINE NEJDI</span></footer>
+  <footer class="site-footer section-wrap"><a class="brand" href="#top"><span class="brand-mark">MN</span><span>Mohamed Amine Nejdi <span class="brand-muted">/ Developer</span></span></a><p data-i18n="footerBuilt">Designed and built with HTML, CSS, and JavaScript.</p><span>© <span id="year"></span> Mohamed Amine Nejdi</span></footer>
 </body>
 </html>

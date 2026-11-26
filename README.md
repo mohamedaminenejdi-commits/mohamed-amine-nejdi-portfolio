@@ -28,10 +28,10 @@ Your email and phone number will be visible to the public. The Tombola card link
 ## Personalize it before publishing
 
 - Your name, email, phone, GitHub profile, and Tombola links are filled in. Check them before publishing because contact details will be public.
-- In `app.js`, edit the `projects` array to add your own projects and update project links. The appointment booking project is listed as `IN DEVELOPMENT` until you deploy it and set its live URL.
+- In `app.js`, edit the `projects` array to add your own projects and update project links. The Tombola and appointment booking entries currently link to their Cloudflare Worker demos.
 - The language button switches between English and French. Text is in the `translations` object in `app.js`.
 - Keep project status honest: label work as `LIVE`, `DEMO`, or `IN PROGRESS` accurately.
-- In `style.css`, adjust colors, spacing, and layout. The light blue theme and gradient are at the end of the file.
+- In `style.css`, adjust the color tokens near the top, then tune spacing and layout in the matching component rules.
 
 ## Files
 
@@ -68,3 +68,7 @@ If Git says the remote already exists, use `git remote set-url origin https://gi
 ## Appointment booking project
 
 The second portfolio project is in the separate `appointment-booking-cloudflare` folder. Follow its README to run it locally and deploy the Worker with D1. Once Cloudflare gives you the deployed URL, update the project entry in this portfolio's `app.js` with a live link, then push the portfolio change to GitHub to publish it.
+
+## Design credit
+
+The interface refinement was guided by [Unslop](https://github.com/heydamir/unslop), by Damir Sokolovsky, licensed under CC BY 4.0.

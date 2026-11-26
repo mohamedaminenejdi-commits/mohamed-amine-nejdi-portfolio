@@ -1,3 +1,6 @@
 node_modules/
 .env
 .DS_Store
+
+# Local design skill; keep it out of the public site repository
+.agents/
